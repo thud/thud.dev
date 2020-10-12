@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { colors } from "./state/themes";
     import MainTerminal from './components/MainTerminal.svelte';
 </script>
 
@@ -9,6 +10,6 @@
     }
 </style>
 
-<main>
+<main style="background-color:{$colors.bg}">
     <MainTerminal />
 </main>
