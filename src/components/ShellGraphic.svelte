@@ -1,10 +1,7 @@
 <script lang="ts">
     import { writable } from 'svelte/store';
     import colors from '../state/themes';
-    import {
-        bufferchrsize,
-        bufferchrpadding,
-    } from '../state/buffer';
+    import { bufferchrsize, bufferchrpadding } from '../state/buffer';
     import {
         inshell,
         shelltxtrows,

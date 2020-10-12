@@ -7,7 +7,7 @@
         bufferchrsize,
         bufferchrpadding,
     } from '../state/buffer';
-	import type Graphic from "../model/Graphic";
+    import type Graphic from '../model/Graphic';
 
     export let g: Graphic;
     export let gi: number;
@@ -16,9 +16,9 @@
     let rowspeeds = [];
     let rowdists = [];
 
-    let start:number;
+    let start: number;
     let rowi = 0;
-    function fadein(t:number) {
+    function fadein(t: number) {
         if (start === undefined) start = t;
         const elapsed = t - start;
         let nothingtodo = true;
@@ -49,8 +49,8 @@
     const txtwidth = $bufferchrsize * msr[0].length;
     let textx = writable(msr[0].length);
 
-    let lt:number;
-    function marquee(t:number) {
+    let lt: number;
+    function marquee(t: number) {
         if (lt === undefined) lt = t;
         const dt = t - lt;
         lt = t;

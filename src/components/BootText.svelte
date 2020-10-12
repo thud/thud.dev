@@ -17,9 +17,7 @@
         if (start === undefined) start = t;
         const elapsed = t - start;
 
-        const newline = `[${(elapsed / 1000).toFixed(10)}] ${
-            boot_lines[rowi]
-        }`;
+        const newline = `[${(elapsed / 1000).toFixed(10)}] ${boot_lines[rowi]}`;
         $displaytextrows = [newline, ...$displaytextrows].slice(
             0,
             $buffersize[0]

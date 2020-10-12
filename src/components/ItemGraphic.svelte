@@ -8,7 +8,7 @@
         screenWidth,
         entirebufferheight,
     } from '../state/buffer';
-	import type Project from '../model/Project';
+    import type Project from '../model/Project';
 
     export let gi: number;
 
@@ -69,7 +69,7 @@
         </clipPath>
         {#if proj.bgimgurl[0] !== '#'}
             <image
-				xlink:href={proj.bgimgurl}
+                xlink:href={proj.bgimgurl}
                 x={x1 - 500 + 0.5 * Math.min($screenWidth - 2 * $bufferchrpadding - 40, 1000)}
                 y={y1 - 80}
                 clip-path="url(#imgclip{gi})"
