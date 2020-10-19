@@ -12,17 +12,22 @@
     const boot_lines = boot_txt.split('\n');
 
     let start: number;
-    let rowi = 0;
+	let currowi = 0, lastrowi = 0, boot_speed = 0.002;
     function step(t: number) {
         if (start === undefined) start = t;
         const elapsed = t - start;
 
-        const newline = `[${(elapsed / 1000).toFixed(10)}] ${boot_lines[rowi]}`;
-        $displaytextrows = [newline, ...$displaytextrows].slice(
+		const currowi = Math.round(lastrowi + boot_speed*elapsed);
+		const newlines = boot_lines.slice(lastrowi, currowi)
+			.map(row => `[${(elapsed / 1000).toFixed(10)}] ${row}`);
+
+		lastrowi = currowi;
+
+        $displaytextrows = [...newlines, ...$displaytextrows].slice(
             0,
             $buffersize[0]
         );
-        if (++rowi < boot_lines.length) {
+        if (currowi < boot_lines.length) {
             window.requestAnimationFrame(step);
         } else {
             setTimeout(() => {
