@@ -17,12 +17,17 @@
     $: x1 = $bufferchrpadding;
     $: y1 = ($bufferchrsize + $bufferchrpadding) * (gi + 1);
 
+	const indelay = 500 + 500 * proji;
+	
     onMount(() => {
-        $entirebufferheight = Math.max(
-            $entirebufferheight,
-            y1 + 300 + $bufferchrpadding
-        );
+		setTimeout(() => {
+			$entirebufferheight = Math.max(
+				$entirebufferheight,
+				y1 + 300 + $bufferchrpadding
+			);
+		}, indelay);
     });
+
 </script>
 
 <style>
