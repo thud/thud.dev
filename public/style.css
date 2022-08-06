@@ -10,12 +10,12 @@
 }
 
 .block-wrapper {
-    width: min(800px, 90%);
+    width: min(805px, 90%);
     margin: min(50px, 5vh) auto;
     padding: 2px;
     box-sizing: border-box;
     background-color: var(--grey);
-    box-shadow: 10px 10px #444;
+    box-shadow: 10px 10px #444b;
 }
 
 .block {
