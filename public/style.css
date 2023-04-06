@@ -10,7 +10,7 @@
 }
 
 .block-wrapper {
-    width: min(805px, 90%);
+    width: min(850px, 90%);
     margin: min(50px, 5vh) auto;
     padding: 2px;
     box-sizing: border-box;
